@@ -22,11 +22,19 @@ import numpy as np
 # print(generuj(2,4))
 
 #zad 5
-def zad5(n):
-    macierz = np.arange(n,0,-1)
-    macierz = np.diag(macierz)
-    return macierz
-n=3
-print(zad5(n))
+# def zad5(n):
+#     macierz = np.arange(n,0,-1)
+#     macierz = np.diag(macierz)
+#     return macierz
+# n=3
+# print(zad5(n))
 
-#zad 5
+#zad 7
+def zad7(n):
+    macierz = np.ones(shape=(n,n))
+    for i in range(3):
+        macierz[0][i] = (i+1) * 2
+        macierz[i][0] = (i+1) * 2
+    return macierz
+n = 3
+print(zad7(n))
