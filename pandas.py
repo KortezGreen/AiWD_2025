@@ -37,16 +37,13 @@ df = pd.read_excel('datasets/imiona.xlsx')
 
 # 2g
 
-# g1= df[df["Plec"]=="K"].groupby("Imie")["Liczba"].sum().sort_values(ascending=False).head(1)
-# g2= df[df["Plec"]=="M"].groupby("Imie")["Liczba"].sum().sort_values(ascending=False).head(1)
-# print(g2, g1)
+# g1 = df.groupby(['Plec',"Imie"])['Liczba'].sum().sort_values(ascending=False).head(2)
+# print(g1)
 
 # 2h
 
-g1 = df[df["Plec"]=="K"].groupby("Imie")["Liczba"].sum().sort_values(ascending=False).head(1)
-g2 = df[df["Plec"]=="M"].groupby("Imie")["Liczba"].sum().sort_values(ascending=False).head(1)
-g4 = df.groupby(["Rok"])[df["Plec"]=="M"].groupby("Imie")["Liczba"].sum().sort_values(ascending=False).head(1)
-print(g4)
+g1 = df.loc[['M','K']][df.groupby(['Rok',"Imie"])]['Liczba'].sum().sort_values(ascending=False).head()
+print(g1)
 
 # 3
 
