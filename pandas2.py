@@ -30,7 +30,7 @@ import matplotlib.pyplot as plt
 
 # data=pd.read_csv("./datasets/zamowienia.csv", sep=";")
 # wynik = data.groupby("Sprzedawca")["idZamowienia"].count()
-# kolory = list(['red', 'blue', 'green', 'yellow', 'pink', 'orange', 'brown', 'purple', 'gray'])
+# kolory = ['red', 'blue', 'green', 'yellow', 'pink', 'orange', 'brown', 'purple', 'gray']
 # wynik.plot.barh(color=kolory,figsize=(8, 6),rot=45,title="Liczba zamówień dla poszczególnych sprzedawców",ylabel='Sprzedawca',xlabel='Liczba zamówień')
 # print(wynik)
 # plt.show()
